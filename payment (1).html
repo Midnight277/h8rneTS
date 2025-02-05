@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: 50%;
+        }
+        h1 {
+            color: black;
+            background-color: #FFD400;
+            font-size: 60px;
+            font-family: "Arial Black";
+            padding: 10px;
+            text-align: center;
+        }
+        h6 {
+            color: black;
+            background-color: #FFD400;
+            text-align: center;
+            font-size: 25px;
+        }
+        p {
+            color: #FFD400;
+            text-align: center;
+            font-size: 35px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #212121;
+            text-align: left;
+        }
+        li {
+            display: inline-block;
+        }
+        li a {
+            display: block;
+            color: #FFD400;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "Arial Black";
+        }
+        li a:hover {
+            background-color: #FFD400;
+            color: #212121;
+        }
+        .button {
+            background-color: #FFD400;
+            color: black;
+            font-size: 30px;
+            padding: 20px 40px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #FFC000;
+            text-align: center;
+        }
+        #tutor-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 50px;
+            color: #FFD400;
+            text-align: center;
+        }
+        #greeting {
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function findTutor() {
+            document.getElementById("tutor-message").style.display = "block";
+        }
+        function updateGreeting() {
+            let greetingMessage;
+            let hour = new Date().getHours();
+            if (hour < 12) {
+                greetingMessage = "Good morning!";
+            } else if (hour < 18) {
+                greetingMessage = "Good afternoon!";
+            } else {
+                greetingMessage = "Good evening!";
+            }
+            document.getElementById("greeting").innerText = greetingMessage;
+        }
+        window.onload = updateGreeting;
+    </script>
+</head>
+<body>
+<ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="login.html">Log in</a></li>
+    <li><a href="payment.html">Payment</a></li>
+    <li><a href="help-center.html">Help Center</a></li>
+    <li><a href="Tutors-and-Services.html">Tutors and Services</a></li>
+</ul>
+    <style>
+        body {
+            background-color: #212121;
+            color: black; /* Set all text color to black */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #payment {
+            background-color: #FFD400;
+            color: black; /* Set text color to black in this section */
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h2 {
+            color: black; /* Set text color to black in header */
+            font-size: 40px;
+            background-color: #FFD400;
+            padding: 15px;
+            font-family: "Arial Black", sans-serif;
+            border-radius: 10px;
+            margin: 0 0 20px;
+        }
+
+        label {
+            font-size: 20px;
+            color: black; /* Set label text color to black */
+            margin-top: 15px;
+        }
+
+        input, select {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #FFD400;
+            border-radius: 5px;
+            background-color: white;
+            color: black; /* Ensure text inside input and select fields is black */
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #FFD400;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: black;
+            color: #FFD400;
+        }
+
+        .contact-info {
+            font-size: 18px;
+            margin-top: 20px;
+            color: black; /* Set text color to black for contact info */
+        }
+
+    </s
