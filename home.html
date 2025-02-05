@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 50%;
+            height: 50%;
+        }
+        h1 {
+            color: black;
+            background-color: #FFD400;
+            font-size: 60px;
+            font-family: "Arial Black";
+            padding: 10px;
+            text-align: center;
+        }
+        h6 {
+            color: black;
+            background-color: #FFD400;
+            text-align: center;
+            font-size: 25px;
+        }
+        p {
+            color: #FFD400;
+            text-align: center;
+            font-size: 35px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #212121;
+            text-align: left;
+        }
+        li {
+            display: inline-block;
+        }
+        li a {
+            display: block;
+            color: #FFD400;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "Arial Black";
+        }
+        li a:hover {
+            background-color: #FFD400;
+            color: #212121;
+        }
+        .button {
+            background-color: #FFD400;
+            color: black;
+            font-size: 30px;
+            padding: 20px 40px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #FFC000;
+            text-align: center;
+        }
+        #tutor-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 50px;
+            color: #FFD400;
+            text-align: center;
+        }
+        #greeting {
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function findTutor() {
+            document.getElementById("tutor-message").style.display = "block";
+        }
+        function updateGreeting() {
+            let greetingMessage;
+            let hour = new Date().getHours();
+            if (hour < 12) {
+                greetingMessage = "Good morning!";
+            } else if (hour < 18) {
+                greetingMessage = "Good afternoon!";
+            } else {
+                greetingMessage = "Good evening!";
+            }
+            document.getElementById("greeting").innerText = greetingMessage;
+        }
+        window.onload = updateGreeting;
+    </script>
+</head>
+<body>
+<ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="login.html">Log in</a></li>
+    <li><a href="payment.html">Payment</a></li>
+    <li><a href="help-center.html">Help Center</a></li>
+    <li><a href="Tutors-and-Services.html">Tutors and Services</a></li>
+</ul>
+<h1>H8rneTS</h1>
+<p id="greeting"></p>
+<p>Welcome to H8rneTS, your go-to platform for finding tutors and services.</p>
+<button class="button" onclick="findTutor()">Find a Tutor</button>
+<p id="tutor-message">Tutor found! Please wait for an email confirmation.</p>
+<p>Here are the pictures of people who contributed to the website and what they contributed</p>
+<img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475535425_598568543135354_4081351393992943850_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeE3NIoWGKqIm9r6uDLNH8-cm70BGGvbfOKbvQEYa9t84ghIwCzD84dJjYYTwbfrc2AlvElAxvijVvTkNxeXU2Lm&_nc_ohc=vD1VjOVGwDwQ7kNvgGq0ait&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFyjndoMdG5L8YfDwwLj3gsXJ1CNxK43Fo5DHknM4SnCA&oe=67C82F11" alt="Pic of Stacey">
+<h6>Stacey: Made code for payment page and help center page</h6>
+<img src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-1/415376579_713810487515494_4137385734654475434_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEZieCjPht8NdqlcnJG4OSHD8vRZFvWM80Py9FkW9YzzcDyHRlBtcTtbn8dXQFZNaXrT98S7gxmjbFWRURaBirg&_nc_ohc=Mqh7hQ7t_IcQ7kNvgF7OBfz&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=AOc2mPnl8ilGRBXsQmnL-Dg&oh=00_AYCIVHduy8i9t0M3_jb2UCyc46rbd1L_NMnMHDjxLdidNw&oe=67A69B0B" alt="Pic of Renzo">
+<h6>Renzo: Built the framework of the website and made code for Tutors and Services</h6>
+<img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474980329_1275550603731696_9170391024998101980_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeE3rp31wViS0FkEM9ZZ_dVjiipQlds4rXqKKlCV2ziteqdsLMS8nA2VG6Y0B4JyDsxUV0cHot8ivZqadZUT4IMJ&_nc_ohc=6f8OovE-fdkQ7kNvgFsEi-7&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFzfJ9STsdJHB7jtkNavw5IfYex_knSF5NzXZUeVO_rqA&oe=67C84810" alt="Pic of Aldrei">
+<h6>Aldrei: Made code for home page and log in page</h6>
+</body>
+</html>

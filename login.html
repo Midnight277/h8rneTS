@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+
+    <link rel="stylesheet" href="styles.css"> 
+
+    <style>
+        body {
+            background-color: #212121;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: black;
+            background-color: #FFD400;
+            text-align: center;
+            font-size: 60px;
+            font-family: Arial Black;
+            padding: 20px;
+        }
+        p {
+            color: black;
+            background-color: #FFD400;
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial Black;
+            padding: 10px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #212121;
+        }
+        li {
+            display: inline;
+        }
+        li a {
+            display: inline-block;
+            color: #FFD400;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-family: Arial Black;
+        }
+        li a:hover {
+            background-color: #FFD400;
+            color: #212121;
+        }
+        .login-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #FFD400;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #212121;
+            color: #FFD400;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: black;
+        }
+        .forgot-password {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #212121;
+        }
+        .logged-in-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a class="active" href="login.html">Log In</a></li>
+    <li><a href="payment.html">Payment</a></li>
+    <li><a href="help-center.html">Help Center</a></li>
+    <li><a href="Tutors-and-Services.html">Tutors and Services</a></li>
+</ul>
+
+<h1>H8rneTS</h1>
+<p>Log In</p>
+
+<div class="login-container">
+    <form id="loginForm">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="login-btn">Log In</button>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+    </form>
+</div>
+
+<div id="loggedInMessage" class="logged-in-message">
+    🎉 You're logged in! (But not really 😆)
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        document.getElementById("loggedInMessage").style.display = "block"; // Show fake login message
+    });
+</script>
+
+</body>
+</html>
